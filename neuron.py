@@ -1,8 +1,7 @@
 """
 Author: Jamal Toutouh (toutouh@mit.edu)
 
-basic-neuron.py contains the code to create a basic neuron that is able to simulate logic functions: AND and OR
-by using step function.
+neuron.py contains the code to create a basic neuron that uses different activation functions.
 """
 
 import numpy as np
@@ -41,10 +40,10 @@ class Neuron:
         total = np.dot(self.weights, inputs) + self.bias
         return self.activation(total)
 
+# # Test
 activations = ActivationFunctions
 weights = np.array([3, 1])  # w1 = 3, w2 = 1
 bias = -1  # b = -1
 n = Neuron(weights, bias, activations.sigmoid)
-
 x = np.array([4, 1])  # x1 = 4, x2 = 1
 print(n.feedforward(x))  # 0.9999938558253978

@@ -34,15 +34,15 @@ class BasicNeuron:
 # AND function
 weights = np.array([1, 1])  # w1 = 1, w2 = 1
 bias = 0  # b = 0
-andFunction = BasicNeuron(weights, bias, step)
+and_function = BasicNeuron(weights, bias, step)
 input = np.array([1, 1])  # x1 = 0, x2 = 1
-output = andFunction.feedforward(input)
+output = and_function.feedforward(input)
 print('AND({}) = {}'.format(input, output))
 
 # OR function
 weights = np.array([2, 2])  # w1 = 0, w2 = 1
 bias = 0  # b = 0
-orFunction = BasicNeuron(weights, bias, step)
+or_function = BasicNeuron(weights, bias, step)
 input = np.array([2, 3])  # x1 = 2, x2 = 3
-output = orFunction.feedforward(input)
+output = or_function.feedforward(input)
 print('OR({}) = {}'.format(input, output))
