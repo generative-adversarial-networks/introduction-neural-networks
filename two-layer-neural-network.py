@@ -16,20 +16,21 @@ class TwoLayerNeuralNetwork:
     - b = 0
   '''
 
-    def __init__(self):
+    def __init__(self, input_layer_size, hidden_layer_size, bias, activation):
         weights = np.array([0, 1])
-        self.bias = 0
-        self.input_layer_size = 2
-        self.hidden_layer_size = 5
+        self.bias = bias
+        self.input_layer_size = input_layer_size
+        self.hidden_layer_size = hidden_layer_size
+        self.activation = activation
 
-        self.hidden_layer = list(Neuron)
+        self.hidden_layer = list()
         for i in range( self.hidden_layer_size):
-            self.hidden_layer.append(Neuron(self.create_weights(self.input_layer_size), self.bias))
+            self.hidden_layer.append(Neuron(self.create_weights(self.input_layer_size), self.bias, self.activation))
 
         # # The Neuron class here is from the previous section
         # self.h1 = Neuron(weights, bias)
         # self.h2 = Neuron(weights, bias)
-        self.o1 = Neuron(self.create_weights( self.hidden_layer_size), bias)
+        self.o1 = Neuron(self.create_weights( self.hidden_layer_size), self.bias, self.activation)
 
 
     def feedforward(self, x):
@@ -48,6 +49,11 @@ class TwoLayerNeuralNetwork:
         return np.random.normal(size=size)
 
 
-network = TwoLayerNeuralNetwork()
-x = np.array([2, 3])
-print(network.feedforward(x))  # 0.7216325609518421
+# # Test
+# bias = 1
+# input_layer_size = 5
+# hidden_layer_size = 5
+# activation = ActivationFunctions.sigmoid
+# network = TwoLayerNeuralNetwork(input_layer_size, hidden_layer_size, bias, activation)
+# x = np.array([2, 3, 4, 5, 6])
+# print(network.feedforward(x))  # 0.8913968007125518
