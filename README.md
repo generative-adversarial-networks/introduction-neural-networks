@@ -1,7 +1,7 @@
 # Introduction to neural networks
 
 This repository includes a series of *python* codes to introduce the user to the main concepts about **Neural Networks**.
-These examples are part of my webinar/presentation about this topic. The presentation can be found here (**Introduction to neural networks**)[https://jamaltoutouh.github.io/communication/introduction-neural-networks/].
+These examples are part of my webinar/presentation about this topic. The presentation can be found here [**Introduction to neural networks**](https://jamaltoutouh.github.io/communication/introduction-neural-networks/).
 
 #### Setup
 The neural networks introduced here are implemented from scratch and using basic operations. There is no need for any kind of specific python packages, but *numpy* and *matplotlib*.
