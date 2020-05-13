@@ -6,7 +6,7 @@ These examples are part of my webinar/presentation about this topic. The present
 #### Setup
 The neural networks introduced here are implemented from scratch and using basic operations. There is no need for any kind of specific python packages, but *numpy* and *matplotlib*.
 
-An easy way to install this dependency is using the environment file included in ``./auxfiles/`` folder, ''./auxfiles/nnenv.yml'' by using *conda*.
+An easy way to install this dependency is using the environment file included in ``./auxfiles/`` folder, ``./auxfiles/nnenv.yml`` by using *conda*.
 
 ```
 conda env create -f ./auxfiles/nnenv.yml
@@ -18,7 +18,7 @@ It could be done by running the following command and using the **nnenv** enviro
 source activate nnenv
 ```
 
-Or by installing  *numpy* using *pip* or *conda* in your system:
+Or by installing  *numpy* and *matplotlib* using *pip* or *conda* in your system:
 
 **conda**
 ```
