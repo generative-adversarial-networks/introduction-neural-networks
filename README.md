@@ -30,16 +30,3 @@ pip install numpy matplotlib
 ```
 
 
-##### Conda
-```
-conda env create -f ./src/helper_files/environment.yml
-source activate lipizzaner
-```
-
-##### Pip
-```
-pip install -r ./src/helper_files/requirements.txt
-
-
-
-
