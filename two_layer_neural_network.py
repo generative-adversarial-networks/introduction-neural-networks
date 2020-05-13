@@ -25,7 +25,7 @@ class TwoLayerNeuralNetwork:
         self.hidden_layer_size = hidden_layer_size
         self.activation = activation
 
-        # # The Neuron class here is from the previous section
+        # The Neuron class here is from the previous section
         self.hidden_layer = list()
         for i in range(self.hidden_layer_size):
             self.hidden_layer.append(Neuron(self.create_weights(self.input_layer_size), self.bias, self.activation))
