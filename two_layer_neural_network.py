@@ -1,6 +1,5 @@
 """
 Author: Jamal Toutouh (toutouh@mit.edu)
-
 two_layer_neural_network.py contains the code to create a neural network with:
     - input_layer_size inputs
     - a hidden layer with hidden_layer_size neurons
@@ -12,7 +11,7 @@ import numpy as np
 
 
 class TwoLayerNeuralNetwork:
-    """ It encapsulates a two layer neural neuron with:
+    """It encapsulates a two layer neural neuron with:
     - input_layer_size inputs
     - a hidden layer with hidden_layer_size neurons
     - an output layer with 1 neuron (o1)
@@ -26,11 +25,12 @@ class TwoLayerNeuralNetwork:
         self.hidden_layer_size = hidden_layer_size
         self.activation = activation
 
+        # # The Neuron class here is from the previous section
         self.hidden_layer = list()
-        for i in range( self.hidden_layer_size):
+        for i in range(self.hidden_layer_size):
             self.hidden_layer.append(Neuron(self.create_weights(self.input_layer_size), self.bias, self.activation))
 
-        self.o1 = Neuron(self.create_weights( self.hidden_layer_size), self.bias, self.activation)
+        self.o1 = Neuron(self.create_weights(self.hidden_layer_size), self.bias, self.activation)
 
     def feedforward(self, x):
         if len(x) != self.input_layer_size:

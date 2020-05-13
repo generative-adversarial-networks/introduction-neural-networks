@@ -25,6 +25,14 @@ class ActivationFunctions:
         activation = 1 / (1 + np.exp(-x))
         return {'result': activation, 'name': 'sigmoid'}
 
+    # Derivative of activation funcions needed to train the networks
+    def derivative_sigmoid(x):
+        """ Derivative of sigmoid: f'(x) = f(x) * (1 - f(x)). """
+        def sigmoid(x):
+            return 1 / (1 + np.exp(-x))
+        f = sigmoid(x)
+        return f * (1 - f)
+
 
 class Neuron:
     """ It encapsulates a basic neuron that is constructed according to a list of weights, a bias value,
