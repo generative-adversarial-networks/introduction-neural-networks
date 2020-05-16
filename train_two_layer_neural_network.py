@@ -142,10 +142,10 @@ class TrainedNeuralNetwork:
 
 # Define dataset
 input = np.array([
-    [-9, 0],  # Michael
-    [11, -2],  # Shash
-    [-10, -3],  # Hannah
-    [8, 5],  # Lisa
+    [-9, 0],  # Michael (12 hours/week, 6 papers)
+    [11, -2],  # Shash (32 hours/week, 4 papers)
+    [-10, -3],  # Hannah (11 hours/week,  3 papers)
+    [8, 5],  # Lisa (29 hours/week, 11 papers)
 ])
 real_y = np.array([
     0,  # Michael
@@ -164,7 +164,7 @@ network = TrainedNeuralNetwork(activation, activation_derivative, loss, learning
 network.train(input, real_y)
 
 # Make some predictions
-jamal = np.array([-7, -3])  # 14 hours/week, 5
-mina = np.array([10, -6])  # 31 hours/week, 2 papers
+jamal = np.array([-7, -3])  # 14 hours/week, 6 papers
+mina = np.array([10, -6])  # 31 hours/week, 0 papers
 print("Jamal: %.3f" % network.feedforward(jamal)[0])  # No Data Scientist 0.04
 print("Mina: %.3f" % network.feedforward(mina)[0])  # Data Scientist 0.945
