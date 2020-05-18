@@ -3,6 +3,31 @@
 This repository includes a series of *python* codes to introduce the user to the main concepts about **Neural Networks**.
 These examples are part of my webinar/presentation about this topic. The presentation can be found here [**Introduction to neural networks**](https://jamaltoutouh.github.io/communication/introduction-neural-networks/).
 
+
+### Code:
+
+- ``neuron.py`` includes the code to create a basic neuron that uses different activation functions.
+
+- ``basic-neuron.py`` contains the code to create a basic neuron that is able to simulate logic functions: AND and OR
+by using step function.
+
+- ``basic_two_layer_neural_network.py`` contains the code to create a basic neural network with:
+  - two inputs: x1, and x2
+  - a hidden layer with two neurons: h1 and h2
+  - an output layer with a neuron: o1
+
+- ``two_layer_neural_network.py`` contains the code to create a neural network with:
+    - input_layer_size inputs
+    - a hidden layer with hidden_layer_size neurons
+    - an output layer with one neuron
+
+- ``train-two-layer-neural-network.py`` contains the code to create and train a basic neural network with:
+  - two inputs: x1, and x2
+  - a hidden layer with two neurons: h1 and h2
+  - an output layer with a neuron: o1
+
+
+
 ### Setup
 The neural networks introduced here are implemented from scratch and using basic operations. There is no need for any kind of specific python packages, but *numpy* and *matplotlib*.
 
@@ -28,5 +53,6 @@ conda install numpy matplotlib
 ```
 pip install numpy matplotlib
 ```
+
 
 
